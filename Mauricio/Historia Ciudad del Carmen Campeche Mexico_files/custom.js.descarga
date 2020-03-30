@@ -1,0 +1,529 @@
+/*
+	Theme constants
+*/
+
+var slidePopupYOffset = 123;		//Y position of slide popup in pixel
+var slidePopupDelay = 0;
+var recentPortfolioURL = 'ajax_videos.html';
+var recentBlogPostsURL = 'ajax_posts.html';
+var contactURL = 'ajax_contact.html';
+var pagesURL = 'ajax_pages.html';
+var skinsURL = 'ajax_skins.html';
+
+/*
+	Begin Custom plugins
+*/
+
+
+/*
+	Detect browser and version plugin
+	Author: http://www.quirksmode.org/js/detect.html
+*/
+
+var BrowserDetect = {
+	init: function () {
+		this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
+		this.version = this.searchVersion(navigator.userAgent)
+			|| this.searchVersion(navigator.appVersion)
+			|| "an unknown version";
+		this.OS = this.searchString(this.dataOS) || "an unknown OS";
+	},
+	searchString: function (data) {
+		for (var i=0;i<data.length;i++)	{
+			var dataString = data[i].string;
+			var dataProp = data[i].prop;
+			this.versionSearchString = data[i].versionSearch || data[i].identity;
+			if (dataString) {
+				if (dataString.indexOf(data[i].subString) != -1)
+					return data[i].identity;
+			}
+			else if (dataProp)
+				return data[i].identity;
+		}
+	},
+	searchVersion: function (dataString) {
+		var index = dataString.indexOf(this.versionSearchString);
+		if (index == -1) return;
+		return parseFloat(dataString.substring(index+this.versionSearchString.length+1));
+	},
+	dataBrowser: [
+		{
+			string: navigator.userAgent,
+			subString: "Chrome",
+			identity: "Chrome"
+		},
+		{ 	string: navigator.userAgent,
+			subString: "OmniWeb",
+			versionSearch: "OmniWeb/",
+			identity: "OmniWeb"
+		},
+		{
+			string: navigator.vendor,
+			subString: "Apple",
+			identity: "Safari",
+			versionSearch: "Version"
+		},
+		{
+			prop: window.opera,
+			identity: "Opera"
+		},
+		{
+			string: navigator.vendor,
+			subString: "iCab",
+			identity: "iCab"
+		},
+		{
+			string: navigator.vendor,
+			subString: "KDE",
+			identity: "Konqueror"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "Firefox",
+			identity: "Firefox"
+		},
+		{
+			string: navigator.vendor,
+			subString: "Camino",
+			identity: "Camino"
+		},
+		{		// for newer Netscapes (6+)
+			string: navigator.userAgent,
+			subString: "Netscape",
+			identity: "Netscape"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "MSIE",
+			identity: "Explorer",
+			versionSearch: "MSIE"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "Gecko",
+			identity: "Mozilla",
+			versionSearch: "rv"
+		},
+		{ 		// for older Netscapes (4-)
+			string: navigator.userAgent,
+			subString: "Mozilla",
+			identity: "Netscape",
+			versionSearch: "Mozilla"
+		}
+	],
+	dataOS : [
+		{
+			string: navigator.platform,
+			subString: "Win",
+			identity: "Windows"
+		},
+		{
+			string: navigator.platform,
+			subString: "Mac",
+			identity: "Mac"
+		},
+		{
+			   string: navigator.userAgent,
+			   subString: "iPhone",
+			   identity: "iPhone/iPod"
+	    },
+		{
+			string: navigator.platform,
+			subString: "Linux",
+			identity: "Linux"
+		}
+	]
+
+};
+BrowserDetect.init();
+
+
+/*
+	workSlideshow plugin
+	
+	Author: Peerapong Pulpipatnan
+	http://themeforest.net/user/peerapong
+*/
+
+jQuery.fn.workSlideshow = function(options) {
+  	settings = jQuery.extend({
+     	each: 'div',
+     	nav: '.work_nav'
+  	}, options);
+  	
+  	var current_id = $(this).attr('id');
+  	var size = $('#' +current_id+ ' > div').size(); 
+  	var current_index = 0;
+
+  	$(this).scrollTo($(this).find(settings.each)[0]);
+  	$('a' +settings.nav).css('visibility', 'hidden');
+  
+  	$(this).parent().mouseenter(function(){ 
+		$('a' +settings.nav).css('visibility', 'visible');
+	});
+	
+	$(this).parent().mouseleave(function(){ 
+		$('a' +settings.nav).css('visibility', 'hidden');
+	});
+	
+	
+	// Add current index element
+	$(this).parent().append('<input type="hidden" id="'+current_id+'_current" value="'+current_index+'"/>');
+	
+	
+	// Previous button
+	$('a' +settings.nav+ '.prev').click(function(){ 
+		current_index = parseInt($('#'+current_id+'_current').val());
+		current_index = current_index - 1;	
+		
+		if(typeof($('#' +current_id).find(settings.each)[current_index]) != 'undefined')
+		{
+			$('#'+current_id+'_current').val(current_index);
+			$('#' +current_id).scrollTo($('#' +current_id).find(settings.each)[current_index], 500 );
+		}
+	});
+	
+	// Next button
+	$('a' +settings.nav+ '.next').click(function(){ 
+		current_index = parseInt($('#'+current_id+'_current').val());
+		current_index = current_index + 1;
+		
+		$('#'+current_id+'_current').val(current_index);
+		
+		if(current_index+1 > size)
+		{
+			// if scroll out of parent then go to first element
+			$('#' +current_id).scrollTo($('#' +current_id).find(settings.each)[0], 500 );
+			$('#'+current_id+'_current').val(0);
+		}
+		else
+		{
+			$('#' +current_id).scrollTo($('#' +current_id).find(settings.each)[current_index], 500 );
+		}
+	});
+}
+
+
+
+/*
+	slidePopup plugin
+	
+	Author: Peerapong Pulpipatnan
+	http://themeforest.net/user/peerapong
+*/
+
+jQuery.fn.slidePopup = function(url, options) {
+  	settings = jQuery.extend({
+     	size: 'small',			//options are small, big
+     	position: 'top',		//options are top, relative
+     	displayAsMenu: false	//options are true or false
+  	}, options);
+	
+	var showSlide = 0;
+	var thisId = $(this).attr('id');
+	var targetId = thisId+'_popup';
+	
+	// Cache when first load page
+	$('body').append('<div id="'+thisId+'_popup" class="'+settings.size+'_slide"><div class="top"></div><div class="content"><div class="inner"></div></div><div class="bottom"></div></div>');
+	
+	if(settings.displayAsMenu)
+	{
+		$('#'+targetId+' .content .inner').addClass('menu');
+	}
+	
+	$('#'+targetId+' .content .inner').load(url);
+	$('#'+targetId).attr('rel', settings.position);
+	
+	
+	if(url.length > 0)
+	{
+		if($('#'+targetId).length == 0)
+		{
+			$('body').append('<div id="'+thisId+'_popup" class="'+settings.size+'_slide"><div class="top"></div><div class="content"><div class="inner"></div></div><div class="bottom"></div></div>');
+			
+			$('#'+targetId+' .content .inner').load(url);
+		}
+
+		$(this).mouseenter(function(){ 
+			if(showSlide == 0) {
+				positionPopup(thisId, targetId);
+				$('#'+targetId).show('slide', {direction: 'left'}, 200);
+			}
+		});
+		
+		$(this).mouseleave(function(){   	
+    		setTimeout(function(){ if(showSlide == 0) { $('#'+targetId).hide('slide', {direction: 'left'}, 200); } }, slidePopupDelay);
+		});		
+		
+		$('#'+targetId).mouseenter(function(){ 
+			showSlide = 1;
+			$('#'+thisId).find('a').addClass('hover');
+			$(this).show();
+		});
+		
+		$('#'+targetId).mouseleave(function(){ 
+			showSlide = 0;
+			setTimeout(function(){ if(showSlide == 0) { $('#'+targetId).hide('slide', {direction: 'left'}, 200); $('#'+thisId).find('a').removeClass('hover'); } }, slidePopupDelay);
+		});
+		
+		// When window resized re calculate slide popup position
+		$(window).resize(function() {
+  			positionPopup(thisId, targetId);
+		});
+		
+		$(window).scroll(function() {
+  			positionPopup(thisId, targetId);
+		});
+	}
+	
+}
+
+
+/*
+	Find element's Y axis position
+*/
+
+function findPosY(obj) 
+{
+	var curtop = 0;
+	if (obj.offsetParent) 
+	{
+		while (1) 
+		{
+			curtop+=obj.offsetTop;
+			if (!obj.offsetParent) 
+			{
+				break;
+			}
+			obj=obj.offsetParent;
+		}
+	} 
+	else if (obj.y) 
+	{
+		curtop+=obj.y;
+	}
+		
+	return curtop;
+}
+
+/*
+	Find element's X axis position
+*/
+
+function findPosX(obj) 
+{
+	var curtop = 0;
+	if (obj.offsetParent) 
+	{
+		while (1) 
+		{
+			curtop+=obj.offsetLeft;
+			if (!obj.offsetParent) 
+			{
+				break;
+			}
+			obj=obj.offsetParent;
+		}
+	} 
+	else if (obj.x) 
+	{
+		curtop+=obj.x;
+	} 
+	
+	return curtop;
+}
+
+/*
+	Calculate slide popup
+*/
+
+function positionPopup(menuId , slideId)
+{
+	popupPosition = $('#'+slideId).attr('rel');
+	
+	if(popupPosition == 'top')
+	{
+		slidePosY = slidePopupYOffset;
+	}
+	else
+	{
+		if(BrowserDetect.browser!="Safari"&&BrowserDetect.browser!="Chrome"){
+		
+			slidePosY = findPosY(document.getElementById(menuId))-10;
+			
+		}else{
+		
+			slidePosY = findPosY(document.getElementById(menuId))-12;
+			
+		}
+		
+		if(BrowserDetect.browser=="Explorer"){
+			
+			if(BrowserDetect.version < 8)
+			{
+				slidePosY = findPosY(document.getElementById(menuId))-110;
+			}
+			else
+			{
+				slidePosY = findPosY(document.getElementById(menuId))-12;
+			}
+			
+		}
+	}
+	
+	slidePosX = findPosX(document.getElementById(menuId))+212;
+	
+	if(BrowserDetect.browser == 'Explorer')
+	{
+		slidePosX = slidePosX + 2;
+	}
+	
+	// Get scroll postion
+	if(BrowserDetect.browser == 'Explorer')
+	{
+		var slideScrollY = document.documentElement.scrollTop ? 
+              document.documentElement.scrollTop : 
+              document.body.scrollTop;
+	}
+	else
+	{
+		slideScrollY = window.pageYOffset;
+	}
+	
+	$('#'+slideId).css('top', parseInt(slidePosY+slideScrollY) +'px');
+	$('#'+slideId).css('left', slidePosX+'px');
+}
+
+
+/*
+	function to switch between each skins
+*/
+
+function switchSkin(skin)
+{
+	$('head').append('<link rel="stylesheet" href="css/skins/'+ skin +'.css" type="text/css" media="all">');
+}
+
+
+/*
+	End Custom plugins
+*/
+
+
+
+$(function(){ 
+	
+	// Preload images
+	$.preloadCssImages();
+	
+	// Setup click to hide to all alert boxes
+	$('.alert_warning').click(function(){
+		$(this).fadeOut('fast');
+	});
+	
+	$('.alert_info').click(function(){
+		$(this).fadeOut('fast');
+	});
+	
+	$('.alert_success').click(function(){
+		$(this).fadeOut('fast');
+	});
+	
+	$('.alert_error').click(function(){
+		$(this).fadeOut('fast');
+	});
+	
+});
+
+
+$(document).ready(function(){ 
+	
+	// Setup slider 5 second to change each slide
+	$('#img_slider').nivoSlider({ effect: 'fade', directionNav:true, pauseTime: 5000 });
+	
+	// Setup slider 5 second to change each slide in fold effect
+	$('#img_slider_fold').nivoSlider({ effect: 'fold', directionNav:true, pauseTime: 5000 });
+	
+	// Hide slider nav
+	$('.nivo-directionNav').hide();
+	
+	// Important to make left menu stay above others
+	$('#main_menu').css('zIndex', 999);
+	
+	// Setup tooltips for all recent portfolio items
+	$('#recent_portfolio ul li a').tipsy({gravity: 'w'});
+
+	
+	/* 
+		Begin setup popup for menu
+	*/
+	
+	$('#menu_portfolio').slidePopup(recentPortfolioURL, { size: 'small' });
+	$('#menu_pages').slidePopup(pagesURL, { size: 'small', displayAsMenu: true });
+	$('#menu_skins').slidePopup(skinsURL, { size: 'small', displayAsMenu: true });
+	$('#menu_blog').slidePopup(recentBlogPostsURL, { size: 'big' });
+	$('#menu_contact').slidePopup(contactURL, { size: 'big', position: 'relative' });
+	
+	/* 
+		End setup popup for menu
+	*/
+	
+	// Find all the input elements with title attributes and add hint to it
+    $('input[title!=""]').hint();
+	
+	// Setup featured works showcase in home
+	$('#work_slideshow').workSlideshow();
+	
+	// Setup vimeo video modal window for portfolio
+	$('#portfolio_vimeo').fancybox({ 
+		padding: 10,
+		overlayColor: '#000000', 
+		overlayOpacity: .7
+	});
+	
+	// Setup youtube video modal window for portfolio
+	$('#portfolio_youtube').fancybox({ 
+		padding: 10,
+		overlayColor: '#000000', 
+		overlayOpacity: .7
+	});
+	
+	// Setup photo gallery
+	$('.thumbnail li a[rel=slide]').fancybox({ 
+		padding: 0,
+		overlayColor: '#000000', 
+		overlayOpacity: .7
+	});
+	
+	// Setup all image caption
+	$('img.caption').captify({
+		// all of these options are... optional
+		// ---
+		// speed of the mouseover effect
+		speedOver: 'fast',
+		// speed of the mouseout effect
+		speedOut: 'normal',
+		// how long to delay the hiding of the caption after mouseout (ms)
+		hideDelay: 100,	
+		// 'fade', 'slide', 'always-on'
+		animation: 'slide',		
+		// text/html to be placed at the beginning of every caption
+		prefix: '',		
+		// opacity of the caption on mouse over
+		opacity: '0.6',					
+		// the name of the CSS class to apply to the caption box
+		className: 'caption-bottom',	
+		// position of the caption (top or bottom)
+		position: 'bottom',
+		// caption span % of the image
+		spanWidth: '100%'
+	});
+	
+	// Setup eaxmple click to slide featued works
+	setTimeout(function(){ $('.work_nav.next').click(); }, 2000);
+	
+	$('#menu_skins a').click(function(){
+		return false;
+	});
+
+});

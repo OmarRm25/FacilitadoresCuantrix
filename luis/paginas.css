@@ -1,0 +1,49 @@
+body {
+  background-color: beige;
+}
+
+
+h2 {
+font-family: sans-serif;
+  color: saddlebrown;
+   font-size: 40px;
+    text-align: center;
+}
+
+h3 {
+  font-family: sans-serif;
+  color: saddlebrown;
+   font-size: 30px;
+    text-align: left;
+}
+
+li {
+  font-family: sans-serif;
+  color: saddlebrown;
+   font-size: 35px;
+    text-align: left;
+
+}
+
+img {
+  float: center;
+  width: 1500px;
+  margin: 100px;
+  border-color: saddlebrown;
+border-width: 30px;
+  border-style: solid;
+  border-radius: 10px;
+}
+
+p {
+    text-align: left;
+    font-family: fantasy;
+    font-size: 30px;
+}
+
+a {
+  color: saddlebrown;
+  font-size: 40px;
+  font-family: fantasy;
+
+}

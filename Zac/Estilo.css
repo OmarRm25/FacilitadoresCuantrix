@@ -1,0 +1,52 @@
+.Titulo {
+  width: 100%;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgba(35,21,219,1.00);
+  color: white;
+  font-size: 32px;
+  border: 10px solid #000;
+}
+.Subtitulo{
+  text-align:center;
+  background-color: aquamarine;
+  font: italic;
+  color: black;
+  font-size: 28px;		
+}
+.Menu{
+  text-align:center;
+  background-color: silver;
+  font: italic;
+  color: White;
+  font-size: 28px;
+  border: 1px solid #000;
+}
+.Texto{
+  font: italic;
+  color: black;
+  font-size: 28px;		
+  text-align: justify;
+}
+.PicH{
+	border: 5px solid #111;
+	height: 640px ;
+	width: 820px ;
+  float: center;
+}
+.PicV{
+	border: 5px solid #111;
+	height: 640px ;
+	width: 420px ;
+  float: center;
+}
+.Body{
+	background : #00b2ff;
+}
+.Himno{
+  text-align:center;
+  font: italic;
+  color: black;
+  font-size: 28px;    
+ }

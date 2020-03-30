@@ -1,0 +1,344 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section{display:block;}
+ol, ul{list-style:none;}
+blockquote, q{quotes:none;}
+blockquote:before, blockquote:after,
+q:before, q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+img.scale, img.responsive{max-width:100%;height:auto;}
+.alpha{margin-left:0;}
+.omega{margin-right:0;}
+.beta{margin-left:0;margin-right:0;}
+html{background:#f2f3f7;line-height:1.4;color:#222;}
+body{line-height:1;}
+body{font-family:arial,sans-serif;text-align:justify;font-size:16px;}
+button, input, select, textarea{color:#222;}
+::-moz-selection{background:#b3d4fc;text-shadow:none;}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:0.4em 0;padding:0;}
+audio, canvas, img, video{vertical-align:middle;}
+fieldset{border:0;margin:0;padding:0;}
+textarea{resize:vertical;}
+input{box-shadow:none;border:1px solid #e7e8ea;-webkit-border-radius:5px;border-radius:5px;padding:10px;width:100%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+select::-ms-expand{display:none;}
+a{color:#307DAB;text-decoration:none;}
+a:hover{color:#122439;}
+p{line-height:20px;color:#444;}
+b, strong{font-weight:700;}
+#header{min-height:60px;margin-bottom:4px;background:#fff;background:-moz-linear-gradient(top, #fff 0, #f9f9fb 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(100%, #f9f9fb));background:-webkit-linear-gradient(top, #fff 0, #f9f9fb 100%);background:-o-linear-gradient(top, #fff 0, #f9f9fb 100%);background:-ms-linear-gradient(top, #fff 0, #f9f9fb 100%);background:linear-gradient(to bottom, #fff 0, #f9f9fb 100%);}
+#header .logo{float:left;height:56px;width:290px;text-indent:-9999px;display:inline-block;background:url(https://www.calcularruta.com/user-content/templates/rutas/public/images/calcularruta.png) 0 0 no-repeat;margin:2px 0;}
+#header nav{text-align:center;}
+#header nav ul{float:right;line-height:60px;}
+#header nav ul li{display:block;float:left;}
+#header nav ul a{color:#307DAB;display:block;padding:0 18px;text-transform:uppercase;}
+#header nav ul a:hover{background:#f2f3f7;color:#307DAB;}
+h1{color:#444;font-size:20px;}
+h1 span{color:#307DAB;}
+h2{color:#444;margin-bottom:2px;font-size:18px;}
+h2 span{color:#307DAB;}
+h4{font-weight:700;font-size:18px;margin:0;}
+.container-12{width:970px;margin:0 auto;}
+.container-12 .grid-12{width:970px;display:inline;float:left;}
+.grid-840{width:660px;float:left;}
+aside{float:left;padding-left:10px;}
+.grid-300{float:left;width:300px;margin-left:0px;}
+.bloque{padding:10px 10px;background:#fff;margin-bottom:5px;}
+.bloque h3{color:#444;font-size:18px;}
+.bloque p{padding-bottom:5px;}
+.calc-portada input[type="submit"]{background:#307DAB;font-weight: bold;font-size: 14px;float:left;cursor:pointer;color:#fff;width:100px;margin:0 0 0 10px;}
+.bloque_buscador{padding-bottom:25px;padding-top:2px;padding-left:10px;padding-right:0px;background:#fff;margin-bottom:2px;}
+.titulo-busca{color:#444;font-size:16px;}
+.origen, .destino{width:410px;margin-left:10px;float:left;}
+.origen input, .destino input{margin-top:0;font-size:14px;}
+.origen label, .destino label{display:block;}
+.origen{margin-left:0;}
+.p25{padding-bottom:25px;}
+.subcalc{background:#FFFFFF;color:#666;display:block;line-height:22px;padding:7px 12px;margin-top:-30px;margin-bottom:4px;min-height:18px;font-size:12px;}
+.msg{color:#ff0000;}
+.msgori{color:#ff0000;}
+.msgdes{color:#ff0000;}
+.titulo_form{color:#444;font-size:18px;}
+.itine{width:100%;height:240px;overflow:auto;}
+.instruccionesmovil{width:100% !important;height:180px;overflow:auto;}
+.pointer li{background:url(https://www.calcularruta.com/user-content/templates/rutas/public/images/pointer.gif) 0 50% no-repeat;padding-left:15px;margin-bottom:10px;}
+.pointer a:hover{color:#122439;}
+.masinfo p{color:#444;line-height:20px;}
+.peque{color:#666;font-size:12px;}
+.gas{float:left;min-width:66px;text-align:center;vertical-align:middle;}
+.gas .logo{display:block;text-indent:-9999px;height:40px;margin-bottom:10px;}
+.gasolina95 .logo{background:url(https://www.calcularruta.com/user-content/templates/rutas/public/images/gasolina_r2_c1.png) 0 0 no-repeat;border-bottom:5px solid #307DAB;margin-right:1px;}
+.gasolina98 .logo{background:url(https://www.calcularruta.com/user-content/templates/rutas/public/images/gasolina_r2_c3.png) 0 0 no-repeat;border-bottom:5px solid #6ab52f;margin-right:1px;}
+.gasoil .logo{background:url(https://www.calcularruta.com/user-content/templates/rutas/public/images/gasolina_r3_c5.png) 0 0 no-repeat;border-bottom:5px solid #00acee;margin-right:1px;}
+.gasoilplus .logo{background:url(https://www.calcularruta.com/user-content/templates/rutas/public/images/gasolina_r1_c7.png) 0 0 no-repeat;border-bottom:5px solid #fb3333;margin-right:1px;}
+.precio{position:relative;color:#444;font-size:18px;}
+.precio:after{content:'€/L';position:absolute;bottom:-2px;right:-14px;color:#307DAB;font-size:10px;}
+.styled-select select{background:transparent;width:100%;font-size:16px;padding:5px;line-height:1;border:0;border-radius:0;height:34px;-webkit-appearance:none;cursor:pointer;color:#666;}
+.styled-select{width:100%;height:34px;overflow:hidden;border:1px solid #ccc;-webkit-border-radius:5px;border-radius:5px;}
+.buscar_gaso a{margin-top:10px;font-weight:400;}
+.busc_gas h2{color:#444;font-size:18px;}
+.select_provincia{margin-bottom:10px;}
+.select_ciudad{margin-bottom:20px;}
+.incidencias ul{border-top:1px solid #ddd;padding-top:10px;}
+.incidencias li{color:#444;line-height:22px;border-bottom:1px solid #ddd;padding-bottom:10px;margin-bottom:10px;}
+.incidencias .fecha{color:#0D8F63;}
+.incidencias .fecha:after{color:#0D8F63;content:' - '}
+.advertising-top{min-width:125px;max-width:970px;margin-top:5px;margin-bottom:5px;}
+.advertising-320{width:320px;margin:0 auto;margin-top:2px;margin-bottom:5px;}
+.advertising-center{min-width:125px;margin:0 auto;margin-top:5px;margin-bottom:5px;}
+.advertising-bottom{min-width:125px;margin:0 auto;margin-top:5px;margin-bottom:5px;}
+.advertising-alt{min-width:125px;max-width:970px;margin-top:5px;margin-bottom:5px;}
+.advertising-300{width:300px;margin:0 auto;margin-top:5px;margin-bottom:5px;}
+.advertising-mb{width:300px;margin:0 auto;margin-top:15px;margin-bottom:15px;}
+.spacer{text-align:center;}
+.calculo{width:336px;}
+.der{margin-left:10px;width:600px;}
+.botonesmovil{height:22px}
+.botonesmovil2{height:22px;margin-top:6px;}
+.btn{display:inline-block;padding:3px 7px;margin-bottom:0;font-size:14px;font-weight:normal;text-align:center;white-space:nowrap;vertical-align:middle;cursor:pointer;background-image:none;border:1px solid transparent;border-radius:3px;line-height:1;}
+.btn:focus,.btn.active.focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+.btn:hover,.btn:focus{color:#333;text-decoration:none;}
+.btn-default{color:#333;background-color:#fff;border-color:#ccc;}
+.btn-default.focus{color:#333;background-color:#e6e6e6;border-color:#8c8c8c;}
+.btn-default:hover{color:#333;background-color:#e6e6e6;border-color:#adadad;}
+.btn-default:active{color:#333;background-color:#e6e6e6;border-color:#adadad;}
+.btn-default.active{background-image:none;}
+.btn-default .badge{color:#fff;background-color:#333;}
+.textcolor{color:#09865F;font-weight:bold;font-size:12px;}
+.textcolor2{color:#09865F;font-weight:bold;font-size:12px;}
+a.btn{font-size:14px;padding:3px 7px;text-decoration:none;}
+a.btn:link,a.btn:visited{font-size:14px;padding:3px 7px;text-decoration:none;}
+a.btn:hover{font-size:14px;padding:3px 7px;text-decoration:none;}
+#contenedor_ruta .right{color:#307DAB;font-size:18px;font-weight:600;}
+#contenedor_ruta .right .distancia{position:relative;height:36px;line-height:20px;display:inline-block;padding-left:35px;background:url(https://www.calcularruta.com/user-content/templates/rutas/public/images/sprite.png) 0 -96px no-repeat;margin-right:20px;}
+#contenedor_ruta .right .after{position:absolute;bottom:0;right:0;text-transform:uppercase;color:#999;font-size:10px;}
+#contenedor_ruta .right .distancia:after, #contenedor_ruta .right .duracion:after{position:absolute;bottom:0;right:0;text-transform:uppercase;color:#999;font-size:10px;}
+#contenedor_ruta .right .distancia:after{content:'distancia'}
+#contenedor_ruta .right .duracion:after{content:'duracion'}
+#contenedor_ruta .right .duracion{position:relative;height:36px;line-height:20px;display:inline-block;padding-left:35px;background:url(https://www.calcularruta.com/user-content/templates/rutas/public/images/sprite.png) 0 -42px no-repeat;}
+#contenedor_ruta .right .inversa{position:relative;height:36px;line-height:20px;display:inline-block;padding-left:35px;background:url(https://www.calcularruta.com/user-content/templates/rutas/public/images/sprite.png) 0 -121px no-repeat;margin-right:20px;}
+#contenedor_ruta .right .inversa a{color:#307DAB;text-decoration:none;}
+#contenedor_ruta .right .inversa:after{position:absolute;bottom:0;right:0;text-transform:uppercase;color:#999;font-size:10px;}
+#contenedor_ruta .right .inversa:after{content:'inversa'}
+#contenedor_ruta .calculo{color:#444;width:336px;float:left;}
+#contenedor_ruta .der{color:#444;}
+#contenedor_ruta .calculo form input{vertical-align:bottom;width:16px;}
+#contenedor_ruta .calculo .boton{float:left;width:110px;margin-bottom:10px;}
+#contenedor_ruta .der form input{vertical-align:bottom;width:16px;}
+#contenedor_ruta .der .boton{float:left;width:100px;margin-bottom:10px;}
+#contenedor_ruta .datos{border:1px solid #ccc;padding:10px;line-height:20px;min-height:65px;}
+#contenedor_ruta .der .datos span{color:#444;}
+#contenedor_ruta .der .datos ul{margin:0;}
+#contenedor_ruta .der .datos li{padding-left:0px;color:#307DAB;}
+#contenedor_ruta .der{float:left;}
+#contenedor_ruta .der .bloque{padding:2px;border:1px solid #ddd;}
+#contenedor_ruta .calculo .bloque_buscador{padding-bottom:25px;padding-top:5px;padding-left:0px;padding-right:0px;background:#fff;margin-bottom:0px;}
+#contenedor_ruta .calculo .o, .d{margin-left:0px;float:none;}
+#contenedor_ruta .calculo .o input{width:100%;margin-top:0;font-size:16px;vertical-align:baseline;} 
+#contenedor_ruta .calculo .d input{width:100%;margin-top:4px;font-size:16px;vertical-align:baseline;}
+#contenedor_ruta .calculo .calc-portada input[type="submit"]{background-color: #09865F;border-radius: 4px;font-weight: bold;font-size: 15px;float:left;cursor:pointer;color:#fff;width:100%;margin:0;margin-top:4px;}
+.form_cal{padding:10px 0px 10px 0px;}
+.sub_title{display:block;color:#444;margin-bottom:15px;}
+.fila{color:#7b7a7a;height:30px;line-height:30px;padding-left:15px;}
+.fila span{font-weight:600;}
+.fila span:after{content:' - '}
+.final{height:80px !important;line-height:80px;}
+.final span{font-weight:400 !important;}
+.final span:after{content:'' !important;}
+.gasolinera_detail{border-bottom:1px solid #ddd;padding-bottom:20px;margin-bottom:20px;}
+.gasolinera_detail .gmaps{margin-right:15px;float:left;width:160px;}
+.gasolinera_detail .gmaps a{margin-top:-2px;display:block;width:100%;height:30px;line-height:30px;color:#fff;background:#307DAB;text-transform:uppercase;text-align:center;}
+.gasolinera_detail ul span{color:#307DAB;}
+.gasolinera_detail h4{color:#307DAB;font-size:20px;border-bottom:1px solid #ddd;margin-bottom:20px;padding-bottom:10px;}
+.gasolinera_detail .detalles{float:left;width:100%;}
+.gasolinera_detail li{margin-bottom:10px;font-size:16px;}
+.gasolinera_detail .lugar{background:url(https://www.calcularruta.com/user-content/templates/rutas/public/images/date.gif) 0 50% no-repeat;padding-left:20px;}
+.gasolinera_detail .price{color:#09865F}
+.otras_locad{text-transform:uppercase;}
+.m_5{margin-top:5px;}
+.m_10{margin-top:10px;}
+.m_10_2{margin-top:10px;margin-bottom:10px;}
+.m_titulo{min-height:36px;}
+.mb_10{margin-bottom:10px;}
+.m_15{margin-top:15px;}
+.m_20{margin-top:20px;}
+.m_30{margin-top:30px;}
+.botones{height:24px;margin-bottom:5px;}
+.clearfix:before, .clearfix:after{content:" ";display:table;}
+.clearfix:after{clear:both;}
+.right{float:right;}
+.right2{float:right;}
+.right2-10{float:right;margin-left:8px}
+.container_social{height:33px;}
+.c_desktop{width:185px;height:33px;margin:0 auto;}
+.c_social{width:185px;margin:0 auto;padding-bottom:4px;}
+.sprite {background-image: url(https://www.calcularruta.com/user-content/templates/rutas/public/images/social.png);background-repeat: no-repeat;display: block;}
+.sprite-facebook {width: 38px;height: 33px;background-position: -5px -5px;}
+.sprite-gplus {width: 38px;height: 33px; background-position: -53px -5px;}
+.sprite-print {width: 38px;height: 33px; background-position: -101px -5px;}
+.sprite-twitter {width: 38px;height: 33px;background-position: -149px -5px;}
+.sprite-whatapp {width: 38px;height: 33px;background-position: -197px -5px;}
+.share i{float: left;margin-left: 8px;}
+.share .v{float: none;}
+.share .pr{margin-left: 0px;}
+.left{float:left;}
+.leftdiv-10{float:left;margin-left:5px}
+.azul{color:#307DAB;}
+.two_colum{-moz-column-count:2;-moz-column-gap:30px;-webkit-column-count:2;-webkit-column-gap:30px;column-count:2;column-gap:30px;}
+#footer{min-height:50px;line-height:50px;background:#fff;}
+#footer p{text-align:center;}
+#cookie-bar{background:#F9FAFC;height:auto;line-height:24px;color:#444;text-align:center;padding:3px 0;font-size:13px;}
+#cookie-bar.fixed{position:fixed;top:0;left:0;width:100%;}
+#cookie-bar.fixed.bottom{bottom:0;top:auto;}
+#cookie-bar p{margin:0;padding:0;}
+#cookie-bar a{color:#ffffff;display:inline-block;border-radius:3px;text-decoration:none;padding:0 6px;margin-left:15px;min-width:49px;}
+#cookie-bar .cb-enable{background:#307DAB;}
+#cookie-bar .cb-enable:hover{background:#307DAB;}
+#cookie-bar .cb-disable{background:#307DAB;}
+#cookie-bar .cb-disable:hover{background:#307DAB;}
+#cookie-bar .cb-policy{background:#7B8A8B;}
+#cookie-bar .cb-policy:hover{background:#7B8A8B;}
+#mapa{width:100% !important;height:330px !important;display:none;}
+#cmapa {height: 70px;padding-top: 60px;}
+#cmapa button {background-color: #09865F;color: #fff;text-decoration: none;padding: 4px 8px;border-radius: 4px;font-weight: bold;font-size: 15px;}
+#cmapa {margin: 0;text-align: center;font-size: 11px;background: transparent url(https://www.calcularruta.com/user-content/templates/rutas/public/images/maps.jpg) no-repeat;background-size: cover;padding-top: 130px;cursor: pointer;height:200px !important}
+#mapa_inc{width:100% !important;height:330px !important;display:none;}
+#cmapa_inc {height: 70px;padding-top: 60px;}
+#cmapa_inc button {background-color: #09865F;color: #fff;text-decoration: none;padding: 4px 8px;border-radius: 4px;font-weight: bold;font-size: 15px;}
+#cmapa_inc {margin: 0;text-align: center;font-size: 11px;background: transparent url(https://www.calcularruta.com/user-content/templates/rutas/public/images/maps.jpg) no-repeat;background-size: cover;padding-top: 130px;cursor: pointer;height:200px !important}
+#mapa_gas{width:100% !important;height:330px !important;display:none;}
+#cmapa_gas {height: 70px;padding-top: 60px;}
+#cmapa_gas button {background-color: #09865F;color: #fff;text-decoration: none;padding: 4px 8px;border-radius: 4px;font-weight: bold;font-size: 15px;}
+#cmapa_gas {margin: 0;text-align: center;font-size: 11px;background: transparent url(https://www.calcularruta.com/user-content/templates/rutas/public/images/maps.jpg) no-repeat;background-size: cover;padding-top: 130px;cursor: pointer;height:200px !important}
+#lateralDerecho{width:120px;height:600px;position:absolute;top:440px;left:50%;z-index:0;}
+#lateralDerecho{margin:0 -587px -1280px 490px;text-align:left;}
+#lateralDerecho{display:inline;}
+#lateralDerecho_int{width:120px;height:600px;position:absolute;top:400px;left:50%;z-index:0;}
+#lateralDerecho_int{margin:0 -587px -1280px 490px;text-align:left;}
+#lateralDerecho_int{display:inline;}
+#responsive-ads{display:none;}
+.tbl_instruction{line-height: 1.2;color: #222;}	
+.tbl_row_instruction_ini{margin: 0;padding: .3em 3px .3em 3px;vertical-align: top;}
+.tbl_row_instruction{border-top: 1px solid #cdcdcd;margin: 0; padding: .3em 3px .3em 3px;vertical-align: top;}
+.typeahead {}
+ul.typeahead{width: 410px;background-color: #fff;position: absolute!important;z-index: 1000;border-radius: 2px;border-top: 1px solid #d9d9d9;box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;overflow: hidden}
+ul.typeahead.dropdown-menu li a {padding: 0 4px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;line-height: 30px;text-align: left;color: #444}
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {color: #307DAB}
+.typeahead__container button,.typeahead__container input,.typeahead__container optgroup,.typeahead__container select,.typeahead__container textarea{font:inherit;margin:0}.typeahead__container optgroup{font-weight:700}.typeahead__container button,.typeahead__container input{overflow:visible}.typeahead__container button,.typeahead__container select{text-transform:none}.typeahead__container [type=reset],.typeahead__container [type=submit],.typeahead__container button,.typeahead__container html [type=button]{-webkit-appearance:button}.typeahead__container [type=button]::-moz-focus-inner,.typeahead__container [type=reset]::-moz-focus-inner,.typeahead__container [type=submit]::-moz-focus-inner,.typeahead__container button::-moz-focus-inner{border-style:none;padding:0}.typeahead__container [type=button]:-moz-focusring,.typeahead__container [type=reset]:-moz-focusring,.typeahead__container [type=submit]:-moz-focusring,.typeahead__container button:-moz-focusring{outline:1px dotted ButtonText}.typeahead__container fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}.typeahead__container legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}.typeahead__container textarea{overflow:auto}.typeahead__container [type=checkbox],.typeahead__container [type=radio]{box-sizing:border-box;padding:0}.typeahead__container [type=number]::-webkit-inner-spin-button,.typeahead__container [type=number]::-webkit-outer-spin-button{height:auto}.typeahead__container [type=search]{-webkit-appearance:textfield;outline-offset:-2px}.typeahead__container [type=search]::-webkit-search-cancel-button,.typeahead__container [type=search]::-webkit-search-decoration{-webkit-appearance:none}.typeahead__container ::-webkit-input-placeholder{color:inherit;opacity:.54}.typeahead__container ::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}.typeahead__container{position:relative;font:1rem Lato,Helvetica Neue,Arial,Helvetica,sans-serif}.typeahead__container *{box-sizing:border-box;outline:0}.typeahead__query{position:relative;z-index:2;width:100%}.typeahead__filter{position:relative}.typeahead__filter button{min-width:100%;white-space:nowrap}.typeahead__filter button:after{display:inline-block;margin-left:4px;width:0;height:0;vertical-align:-2px;content:"";border:4px solid;border-right-color:transparent;border-bottom-color:transparent;border-left-color:transparent}.typeahead__field{display:-ms-flexbox;display:flex;position:relative;width:100%}.typeahead__button button{border-top-right-radius:2px;border-bottom-right-radius:2px}.typeahead__field{color:#555}.typeahead__field .typeahead__hint,.typeahead__field [contenteditable],.typeahead__field input,.typeahead__field textarea{display:block;width:100%;line-height:1.25;min-height:calc(.5rem * 2 + 1.25rem + 2px);padding:.5rem .75rem;background:#fff;border:1px solid #ccc;border-radius:2px 0 0 2px;-webkit-appearance:none;-moz-appearance:none;appearance:none;box-sizing:border-box}.typeahead__field .typeahead__hint:active,.typeahead__field .typeahead__hint:focus,.typeahead__field [contenteditable]:active,.typeahead__field [contenteditable]:focus,.typeahead__field input:active,.typeahead__field input:focus,.typeahead__field textarea:active,.typeahead__field textarea:focus{border-color:#66afe9}.typeahead__field input[type=search],.typeahead__field input[type=search]::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none}.typeahead__field input[type=search]::-ms-clear{display:none;width:0;height:0}.typeahead__container.hint .typeahead__field [contenteditable],.typeahead__container.hint .typeahead__field input,.typeahead__container.hint .typeahead__field textarea{background:transparent}.typeahead__container.hint .typeahead__query>:last-child,.typeahead__hint{background:#fff}.typeahead__container button{display:inline-block;margin-bottom:0;text-align:center;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;background-color:#fff;border:1px solid #ccc;line-height:1.25;padding:.5rem .75rem;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;color:#555}.typeahead__container button:focus,.typeahead__container button:hover{color:#3c3c3c;background-color:#f5f5f5;border-color:#b3b3b3}.typeahead__container button.active,.typeahead__container button:active{background-image:none}.typeahead__container button:active,.typeahead__container button:focus{border-color:#66afe9}.typeahead__container button.disabled,.typeahead__container button[disabled],.typeahead__container input.disabled,.typeahead__container input[disabled]{cursor:not-allowed;opacity:.65;box-shadow:none;background-color:#fff;border-color:#ccc}.typeahead__container .typeahead__field .typeahead__hint,.typeahead__container .typeahead__field .typeahead__label-container,.typeahead__container .typeahead__field [contenteditable],.typeahead__container .typeahead__field input,.typeahead__container .typeahead__field textarea{padding-right:32px}.typeahead__button,.typeahead__filter{z-index:1}.typeahead__button button,.typeahead__filter button{margin-left:-1px;border-bottom-left-radius:0;border-top-left-radius:0}.typeahead__button:active,.typeahead__button:active button:active,.typeahead__button:active button:focus,.typeahead__button:focus,.typeahead__button:focus button:active,.typeahead__button:focus button:focus,.typeahead__button:hover,.typeahead__button:hover button:active,.typeahead__button:hover button:focus,.typeahead__filter:active,.typeahead__filter:active button:active,.typeahead__filter:active button:focus,.typeahead__filter:focus,.typeahead__filter:focus button:active,.typeahead__filter:focus button:focus,.typeahead__filter:hover,.typeahead__filter:hover button:active,.typeahead__filter:hover button:focus{z-index:5}.typeahead__filter+.typeahead__button button{margin-left:-2px}.typeahead__container.filter .typeahead__filter{z-index:5}.typeahead__dropdown,.typeahead__list{position:absolute;left:0;z-index:4;width:100%;min-width:160px;padding:5px 0;margin:2px 0 0;list-style:none;text-align:left;background-color:#fff;border:1px solid #ccc;border-radius:2px;background-clip:padding-box}.typeahead__result.detached .typeahead__list{position:relative;z-index:6;top:auto;left:auto}.typeahead__dropdown{right:0;left:auto;z-index:5}.typeahead__list>li{position:relative;border-top:1px solid #ccc}.typeahead__list>li:first-child{border-top:none}.typeahead__dropdown .typeahead__dropdown-item[disabled]>a,.typeahead__list .typeahead__item[disabled]>a{cursor:not-allowed;color:#bababa;background-color:#fafafa}.typeahead__dropdown .typeahead__dropdown-item>a,.typeahead__list .typeahead__item>a{display:block;padding:.5rem .75rem;clear:both;color:#333;text-decoration:none}.typeahead__dropdown .typeahead__dropdown-item:not([disabled]).active>a,.typeahead__dropdown .typeahead__dropdown-item:not([disabled])>a:focus,.typeahead__dropdown .typeahead__dropdown-item:not([disabled])>a:hover,.typeahead__list .typeahead__item:not([disabled]).active>a,.typeahead__list .typeahead__item:not([disabled])>a:focus,.typeahead__list .typeahead__item:not([disabled])>a:hover{background-color:#f5f5f5;color:#3c3c3c}.typeahead__list.empty>li{padding:.5rem .75rem;color:#333}.typeahead__list>.typeahead__group{border-color:#bfdef6;font-weight:700}.typeahead__list>.typeahead__group:first-child{border-top:1px solid #bfdef6}.typeahead__list>.typeahead__group.active>a,.typeahead__list>.typeahead__group>a,.typeahead__list>.typeahead__group>a:focus,.typeahead__list>.typeahead__group>a:hover{cursor:default;color:#17639f;background:#ecf5fc;display:block;padding:.5rem .75rem;clear:both;text-decoration:none}.typeahead__list>li.typeahead__group+li.typeahead__item{border-color:#bfdef6}.typeahead__container.backdrop+.typeahead__backdrop,.typeahead__container.filter .typeahead__dropdown,.typeahead__container.hint .typeahead__hint,.typeahead__container.result .typeahead__list{display:block!important}.typeahead__container+.typeahead__backdrop,.typeahead__container .typeahead__dropdown,.typeahead__container .typeahead__hint,.typeahead__container .typeahead__list{display:none!important}.typeahead__dropdown li:last-child{margin-top:5px;padding-top:5px;border-top:1px solid #ccc}.typeahead__cancel-button{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:absolute;right:0;cursor:pointer;line-height:1.25;padding:.5rem .75rem;visibility:hidden}.typeahead__label .typeahead__cancel-button{visibility:visible;right:4px}.typeahead__container.cancel:not(.loading) .typeahead__cancel-button,.typeahead__label .typeahead__cancel-button{visibility:visible}.typeahead__container.cancel:not(.loading) .typeahead__cancel-button:hover,.typeahead__label .typeahead__cancel-button:hover{color:#d0021b}.typeahead__search-icon{padding:0 1.25rem;width:16px;height:16px;background:url(data:image/svg+xml;charset=utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI1MC4zMTMgMjUwLjMxMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjUwLjMxMyAyNTAuMzEzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCI+CjxnIGlkPSJTZWFyY2giPgoJPHBhdGggc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkOyIgZD0iTTI0NC4xODYsMjE0LjYwNGwtNTQuMzc5LTU0LjM3OGMtMC4yODktMC4yODktMC42MjgtMC40OTEtMC45My0wLjc2ICAgYzEwLjctMTYuMjMxLDE2Ljk0NS0zNS42NiwxNi45NDUtNTYuNTU0QzIwNS44MjIsNDYuMDc1LDE1OS43NDcsMCwxMDIuOTExLDBTMCw0Ni4wNzUsMCwxMDIuOTExICAgYzAsNTYuODM1LDQ2LjA3NCwxMDIuOTExLDEwMi45MSwxMDIuOTExYzIwLjg5NSwwLDQwLjMyMy02LjI0NSw1Ni41NTQtMTYuOTQ1YzAuMjY5LDAuMzAxLDAuNDcsMC42NCwwLjc1OSwwLjkyOWw1NC4zOCw1NC4zOCAgIGM4LjE2OSw4LjE2OCwyMS40MTMsOC4xNjgsMjkuNTgzLDBDMjUyLjM1NCwyMzYuMDE3LDI1Mi4zNTQsMjIyLjc3MywyNDQuMTg2LDIxNC42MDR6IE0xMDIuOTExLDE3MC4xNDYgICBjLTM3LjEzNCwwLTY3LjIzNi0zMC4xMDItNjcuMjM2LTY3LjIzNWMwLTM3LjEzNCwzMC4xMDMtNjcuMjM2LDY3LjIzNi02Ny4yMzZjMzcuMTMyLDAsNjcuMjM1LDMwLjEwMyw2Ny4yMzUsNjcuMjM2ICAgQzE3MC4xNDYsMTQwLjA0NCwxNDAuMDQzLDE3MC4xNDYsMTAyLjkxMSwxNzAuMTQ2eiIgZmlsbD0iIzU1NTU1NSIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=) no-repeat scroll 50% transparent}.typeahead__container.loading .typeahead__query:after,.typeahead__container.loading .typeahead__query:before{transition:all 0s linear,opacity .2s ease;position:absolute;z-index:3;content:"";top:50%;right:.55em;margin-top:-.675rem;width:1.35rem;height:1.35rem;box-sizing:border-box;border-radius:500rem;border-style:solid;border-width:.1em}.typeahead__container.loading .typeahead__query:before{border-color:rgba(0,0,0,.35)}.typeahead__container.loading .typeahead__query:after{animation:a .6s linear;animation-iteration-count:infinite;border-color:#fff transparent transparent;box-shadow:0 0 0 1px transparent}@keyframes a{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}.typeahead__label-container{list-style:none;position:absolute;padding-top:0.375rem;padding-left:6px;width:100%;-ms-flex-wrap:wrap;flex-wrap:wrap;display:-ms-flexbox;display:flex}.typeahead__label{display:-ms-flexbox;display:flex;font-size:0.875rem;position:relative;background:#ecf5fc;border:1px solid #c2e0ff;padding-left:4px;border-radius:2px;margin-right:4px;margin-bottom:0.375rem}.typeahead__label>*{-ms-flex-item-align:center;align-self:center}.typeahead__label .typeahead__cancel-button{line-height:normal;height:auto;position:static;padding:calc(1rem * .25 - 1px) 6px calc(1rem * .25 + 1px);margin-left:4px;font-size:0.875rem;border-left:1px solid #c2e0ff}.typeahead__label .typeahead__cancel-button:hover{background-color:#d5e9f9}
+@media only screen and (max-width:1279px){#lateralDerecho{display:none;}#lateralDerecho_int{display:none;}}
+@media only screen and (min-width:767px) and (max-width:990px){
+.container-12{width:730px;}
+.container-12 .grid-12{width:730px;}
+.grid-840{width:420px;}
+.origen, .destino{width:288px;margin-left:10px;float:left;}
+ul.typeahead{width: 288px}
+.subcalc{font-size:12px;padding-left:21px;}
+.calculo{width:336px !important;}
+.der{margin-left:10px;width:364px !important;}
+.itine{width:100%;height:270px;overflow:auto;}
+#mapa{width:100% !important;max-height:250px;display:none;}
+#cmapa {height: 70px;padding-top: 60px;}
+#cmapa button {background-color: #09865F;color: #fff;text-decoration: none;padding: 4px 8px;border-radius: 4px;font-weight: bold;font-size: 15px;}
+#cmapa {padding-top: 125px;height:125px !important}
+#mapa_inc{width:100% !important;max-height:250px;}
+#cmapa_inc {height: 70px;padding-top: 60px;}
+#cmapa_inc button {background-color: #307DAB;color: #fff;text-decoration: none;padding: 4px 8px;border-radius: 4px;font-weight: bold;font-size: 15px;}
+#cmapa_inc {padding-top: 125px;height:125px !important}
+#mapa_gas{width:100% !important;max-height:250px;}
+#cmapa_gas {height: 70px;padding-top: 60px;}
+#cmapa_gas button {background-color: #307DAB;color: #fff;text-decoration: none;padding: 4px 8px;border-radius: 4px;font-weight: bold;font-size: 15px;}
+#cmapa_gas {padding-top: 125px;height:125px !important}
+#puntosnegros{display:none}
+#areasdescanso{display:none}
+#lateralDerecho{display:none;}
+#lateralDerecho_int{display:none;}
+#responsive-ads{display:none;}
+}@media only screen and (max-width:767px){
+header nav{display:none;}
+aside{padding-left:0px;}
+li{margin-bottom:15px;}
+.container-12{width:100%;}
+.container-12 .grid-12{width:100%;}
+.grid-840{width:100%;}
+.grid-300{width:100%;}
+.bloque_buscador{padding-bottom:25px;padding-top:5px;padding-left:17px;padding-right:17px;background:#fff;margin-bottom:5px;}
+.origen, .destino{width:100%}
+ul.typeahead{width:285px}
+.grid-12 .destino{margin-left:0px;margin-top:5px;}
+.bloque{padding:10px 10px;background:#fff;margin-bottom:5px;}
+.calc-portada input[type="submit"]{width:100%;margin:10px 0 0 0;}
+.subcalc{font-size:12px;padding:7px 20px;}
+.container_mobile{width:95% !important;}
+.calculo{width:100% !important;margin-bottom:5px;padding:0px;}
+.der{width:100% !important;padding:0px;margin-left:0px;}
+.botonesmovil{height:24px;margin-bottom:5px;margin-top:5px;}
+.itine{width:97%;height:200px;overflow:auto;}
+.instruccionesmovil{width:100% !important;height:180px;overflow:auto;}
+.two_colum{-moz-column-count:1;-moz-column-gap:30px;-webkit-column-count:1;-webkit-column-gap:30px;column-count:1;column-gap:30px;}
+.two_colum li{margin-bottom:15px;}
+.leftdiv-10{margin-left:11px}
+#contenedor_ruta .right .distancia{position:relative;height:36px;line-height:20px;display:inline-block;padding-left:30px;margin-right:0px;}
+#contenedor_ruta .right .duracion{position:relative;height:36px;line-height:20px;display:inline-block;padding-left:30px;margin-right:0px;}
+#contenedor_ruta .right .inversa{color:#09865F;position:relative;height:36px;margin-right:0px;}
+#contenedor_ruta .subcalc{min-height:20px;}
+.book_size_600x50{display:none;}
+#mapa{width:100% !important;max-height:236px;display:none;}
+#cmapa {height: 70px;padding-top: 60px;}
+#cmapa button {background-color: #09865F;color: #fff;text-decoration: none;padding: 4px 8px;border-radius: 4px;font-weight: bold;font-size: 15px;}
+#cmapa {padding-top: 118px;height:118px !important}
+#mapa_inc{width:100% !important;max-height:236px;}
+#cmapa_inc {height: 70px;padding-top: 60px;}
+#cmapa_inc button {background-color: #307DAB;color: #fff;text-decoration: none;padding: 4px 8px;border-radius: 4px;font-weight: bold;font-size: 15px;}
+#cmapa_inc {padding-top: 118px;height:118px !important}
+#mapa_gas{width:100% !important;max-height:236px;}
+#cmapa_gas {height: 70px;padding-top: 60px;}
+#cmapa_gas button {background-color: #307DAB;color: #fff;text-decoration: none;padding: 4px 8px;border-radius: 4px;font-weight: bold;font-size: 15px;}
+#cmapa_gas {padding-top: 118px;height:118px !important}
+#lateralDerecho{display:none;}
+#lateralDerecho_int{display:none;}
+.adcontainer{width:100%;height:auto;position:fixed;bottom:0px;display:block;background:#ffffff;padding-top:1px;padding-bottom:1px;}
+#contenedor_ruta .calculo .boton{float:left;width:150px;margin-bottom:20px;}
+.advertising-top{max-width:320px; max-height: 100px;margin:0 auto;margin-bottom:5px;}
+.adslot_1{max-width:320px; max-height: 100px;}
+#responsive-ads{width:320px !important;display:block !important;margin:0 auto;}
+}
+@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important;}
+pre, blockquote{border:1px solid #999;page-break-inside:avoid;}
+thead{display:table-header-group;}
+tr, img{page-break-inside:avoid;}
+img{max-width:100% !important;}
+aside{padding-left:0px;display:none;}
+#header{display:none;}
+#mapa{width:100% !important;max-height:300px;}
+#mapa_inc{width:100% !important;max-height:300px;}
+#mapa_gas{width:100% !important;max-height:300px;}
+.container-12{width:100%;}
+.container-12 .grid-12{width:100%;}
+.grid-840{width:100%;}
+.titulo-busca{display:none;}
+.calc-portada{display:none;}
+.social{display:none;}
+.subcalc{display:none;}
+.calculo{display:none;}
+.botones{display:none;}
+.advertising-top{display:none;}
+.advertising-center{display:none;}
+.der{width:100%;padding:0px;margin-left:0px;}
+.itine{width:100%;height:100%}
+#lateralDerecho{display:none;}
+#lateralDerecho_int{display:none;}
+.adcontainer{display:none;}
+#responsive-ads{display:none;}
+}
+.leaflet-image-layer,.leaflet-layer,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-pane,.leaflet-pane>canvas,.leaflet-pane>svg,.leaflet-tile,.leaflet-tile-container,.leaflet-zoom-box{position:absolute;left:0;top:0}.leaflet-container{overflow:hidden}.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-tile{-webkit-user-select:none;-moz-user-select:none;user-select:none;-webkit-user-drag:none}.leaflet-safari .leaflet-tile{}.leaflet-safari .leaflet-tile-container{width:1600px;height:1600px;-webkit-transform-origin:0 0}.leaflet-marker-icon,.leaflet-marker-shadow{display:block}.leaflet-container .leaflet-marker-pane img,.leaflet-container .leaflet-overlay-pane svg,.leaflet-container .leaflet-shadow-pane img,.leaflet-container .leaflet-tile,.leaflet-container .leaflet-tile-pane img,.leaflet-container img.leaflet-image-layer{max-width:none!important;max-height:none!important}.leaflet-container.leaflet-touch-zoom{-ms-touch-action:pan-x pan-y;touch-action:pan-x pan-y}.leaflet-container.leaflet-touch-drag{-ms-touch-action:pinch-zoom;touch-action:none;touch-action:pinch-zoom}.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom{-ms-touch-action:none;touch-action:none}.leaflet-container{-webkit-tap-highlight-color:transparent}.leaflet-container a{-webkit-tap-highlight-color:rgba(51,181,229,.4)}.leaflet-tile{filter:inherit;visibility:hidden}.leaflet-tile-loaded{visibility:inherit}.leaflet-zoom-box{width:0;height:0;-moz-box-sizing:border-box;box-sizing:border-box;z-index:800}.leaflet-overlay-pane svg{-moz-user-select:none}.leaflet-pane{z-index:400}.leaflet-tile-pane{z-index:200}.leaflet-overlay-pane{z-index:400}.leaflet-shadow-pane{z-index:500}.leaflet-marker-pane{z-index:600}.leaflet-tooltip-pane{z-index:650}.leaflet-popup-pane{z-index:700}.leaflet-map-pane canvas{z-index:100}.leaflet-map-pane svg{z-index:200}.leaflet-vml-shape{width:1px;height:1px}.lvml{display:inline-block;position:absolute}.leaflet-control{position:relative;z-index:800}.leaflet-bottom,.leaflet-top{position:absolute;z-index:1000}.leaflet-top{top:0}.leaflet-right{right:0}.leaflet-bottom{bottom:0}.leaflet-left{left:0}.leaflet-control{float:left;clear:both}.leaflet-right .leaflet-control{float:right}.leaflet-top .leaflet-control{margin-top:10px}.leaflet-bottom .leaflet-control{margin-bottom:10px}.leaflet-left .leaflet-control{margin-left:10px}.leaflet-right .leaflet-control{margin-right:10px}.leaflet-fade-anim .leaflet-tile{will-change:opacity}.leaflet-fade-anim .leaflet-popup{opacity:0;-webkit-transition:opacity .2s linear;-moz-transition:opacity .2s linear;transition:opacity .2s linear}.leaflet-fade-anim .leaflet-map-pane .leaflet-popup{opacity:1}.leaflet-zoom-animated{-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0}.leaflet-zoom-anim .leaflet-zoom-animated{will-change:transform}.leaflet-zoom-anim .leaflet-zoom-animated{-webkit-transition:-webkit-transform .25s cubic-bezier(0,0,.25,1);-moz-transition:-moz-transform .25s cubic-bezier(0,0,.25,1);transition:transform .25s cubic-bezier(0,0,.25,1)}.leaflet-pan-anim .leaflet-tile,.leaflet-zoom-anim .leaflet-tile{-webkit-transition:none;-moz-transition:none;transition:none}.leaflet-zoom-anim .leaflet-zoom-hide{visibility:hidden}.leaflet-interactive{cursor:pointer}.leaflet-grab{cursor:-webkit-grab;cursor:-moz-grab;cursor:grab}.leaflet-crosshair,.leaflet-crosshair .leaflet-interactive{cursor:crosshair}.leaflet-control,.leaflet-popup-pane{cursor:auto}.leaflet-dragging .leaflet-grab,.leaflet-dragging .leaflet-grab .leaflet-interactive,.leaflet-dragging .leaflet-marker-draggable{cursor:move;cursor:-webkit-grabbing;cursor:-moz-grabbing;cursor:grabbing}.leaflet-image-layer,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-pane>svg path,.leaflet-tile-container{}.leaflet-image-layer.leaflet-interactive,.leaflet-marker-icon.leaflet-interactive,.leaflet-pane>svg path.leaflet-interactive{}.leaflet-container{background:#ddd;outline:0}.leaflet-container a{color:#0078a8}.leaflet-container a.leaflet-active{outline:2px solid orange}.leaflet-zoom-box{border:2px dotted #38f;background:rgba(255,255,255,.5)}.leaflet-container{font:12px/1.5 "Helvetica Neue",Arial,Helvetica,sans-serif}.leaflet-bar{box-shadow:0 1px 5px rgba(0,0,0,.65);border-radius:4px}.leaflet-bar a,.leaflet-bar a:hover{background-color:#fff;border-bottom:1px solid #ccc;width:26px;height:26px;line-height:26px;display:block;text-align:center;text-decoration:none;color:#000}.leaflet-bar a,.leaflet-control-layers-toggle{background-position:50% 50%;background-repeat:no-repeat;display:block}.leaflet-bar a:hover{background-color:#f4f4f4}.leaflet-bar a:first-child{border-top-left-radius:4px;border-top-right-radius:4px}.leaflet-bar a:last-child{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-bottom:none}.leaflet-bar a.leaflet-disabled{cursor:default;background-color:#f4f4f4;color:#bbb}.leaflet-touch .leaflet-bar a{width:30px;height:30px;line-height:30px}.leaflet-touch .leaflet-bar a:first-child{border-top-left-radius:2px;border-top-right-radius:2px}.leaflet-touch .leaflet-bar a:last-child{border-bottom-left-radius:2px;border-bottom-right-radius:2px}.leaflet-control-zoom-in,.leaflet-control-zoom-out{font:bold 18px 'Lucida Console',Monaco,monospace;text-indent:1px}.leaflet-touch .leaflet-control-zoom-in,.leaflet-touch .leaflet-control-zoom-out{font-size:22px}.leaflet-control-layers{box-shadow:0 1px 5px rgba(0,0,0,.4);background:#fff;border-radius:5px}.leaflet-touch .leaflet-control-layers-toggle{width:44px;height:44px}.leaflet-control-layers .leaflet-control-layers-list,.leaflet-control-layers-expanded .leaflet-control-layers-toggle{display:none}.leaflet-control-layers-expanded .leaflet-control-layers-list{display:block;position:relative}.leaflet-control-layers-expanded{padding:6px 10px 6px 6px;color:#333;background:#fff}.leaflet-control-layers-scrollbar{overflow-y:scroll;overflow-x:hidden;padding-right:5px}.leaflet-control-layers-selector{margin-top:2px;position:relative;top:1px}.leaflet-control-layers label{display:block}.leaflet-control-layers-separator{height:0;border-top:1px solid #ddd;margin:5px -10px 5px -6px}.leaflet-container .leaflet-control-attribution{background:#fff;background:rgba(255,255,255,.7);margin:0}.leaflet-control-attribution,.leaflet-control-scale-line{padding:0 5px;color:#333}.leaflet-control-attribution a{text-decoration:none}.leaflet-control-attribution a:hover{text-decoration:underline}.leaflet-container .leaflet-control-attribution,.leaflet-container .leaflet-control-scale{font-size:11px}.leaflet-left .leaflet-control-scale{margin-left:5px}.leaflet-bottom .leaflet-control-scale{margin-bottom:5px}.leaflet-control-scale-line{border:2px solid #777;border-top:none;line-height:1.1;padding:2px 5px 1px;font-size:11px;white-space:nowrap;overflow:hidden;-moz-box-sizing:border-box;box-sizing:border-box;background:#fff;background:rgba(255,255,255,.5)}.leaflet-control-scale-line:not(:first-child){border-top:2px solid #777;border-bottom:none;margin-top:-2px}.leaflet-control-scale-line:not(:first-child):not(:last-child){border-bottom:2px solid #777}.leaflet-touch .leaflet-bar,.leaflet-touch .leaflet-control-attribution,.leaflet-touch .leaflet-control-layers{box-shadow:none}.leaflet-touch .leaflet-bar,.leaflet-touch .leaflet-control-layers{border:2px solid rgba(0,0,0,.2);background-clip:padding-box}.leaflet-popup{position:absolute;text-align:center;margin-bottom:20px}.leaflet-popup-content-wrapper{padding:1px;text-align:left;border-radius:12px}.leaflet-popup-content{margin:13px 19px;line-height:1.4}.leaflet-popup-content p{margin:18px 0}.leaflet-popup-tip-container{width:40px;height:20px;position:absolute;left:50%;margin-left:-20px;overflow:hidden}.leaflet-popup-tip{width:17px;height:17px;padding:1px;margin:-10px auto 0;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#fff;color:#333;box-shadow:0 3px 14px rgba(0,0,0,.4)}.leaflet-container a.leaflet-popup-close-button{position:absolute;top:0;right:0;padding:4px 4px 0 0;border:none;text-align:center;width:18px;height:14px;font:16px/14px Tahoma,Verdana,sans-serif;color:#c3c3c3;text-decoration:none;font-weight:700;background:0 0}.leaflet-container a.leaflet-popup-close-button:hover{color:#999}.leaflet-popup-scrolled{overflow:auto;border-bottom:1px solid #ddd;border-top:1px solid #ddd}.leaflet-oldie .leaflet-popup-content-wrapper{zoom:1}.leaflet-oldie .leaflet-popup-tip{width:24px;margin:0 auto}.leaflet-oldie .leaflet-popup-tip-container{margin-top:-1px}.leaflet-oldie .leaflet-control-layers,.leaflet-oldie .leaflet-control-zoom,.leaflet-oldie .leaflet-popup-content-wrapper,.leaflet-oldie .leaflet-popup-tip{border:1px solid #999}.leaflet-div-icon{background:#fff;border:1px solid #666}.leaflet-tooltip{position:absolute;padding:6px;background-color:#fff;border:1px solid #fff;border-radius:3px;color:#222;white-space:nowrap;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;box-shadow:0 1px 3px rgba(0,0,0,.4)}.leaflet-tooltip.leaflet-clickable{cursor:pointer}.leaflet-tooltip-bottom:before,.leaflet-tooltip-left:before,.leaflet-tooltip-right:before,.leaflet-tooltip-top:before{position:absolute;border:6px solid transparent;background:0 0;content:""}.leaflet-tooltip-bottom{margin-top:6px}.leaflet-tooltip-top{margin-top:-6px}.leaflet-tooltip-bottom:before,.leaflet-tooltip-top:before{left:50%;margin-left:-6px}.leaflet-tooltip-top:before{bottom:0;margin-bottom:-12px;border-top-color:#fff}.leaflet-tooltip-bottom:before{top:0;margin-top:-12px;margin-left:-6px;border-bottom-color:#fff}.leaflet-tooltip-left{margin-left:-6px}.leaflet-tooltip-right{margin-left:6px}.leaflet-tooltip-left:before,.leaflet-tooltip-right:before{top:50%;margin-top:-6px}.leaflet-tooltip-left:before{right:0;margin-right:-12px;border-left-color:#fff}.leaflet-tooltip-right:before{left:0;margin-left:-12px;border-right-color:#fff}#mapa{background: transparent url(https://www.calcularruta.com/user-content/templates/rutas/public/images/indicator.gif) no-repeat center center;}#mapa_inc{background: transparent url(https://www.calcularruta.com/user-content/templates/rutas/public/images/indicator.gif) no-repeat center center;}#mapa_gas{background: transparent url(https://www.calcularruta.com/user-content/templates/rutas/public/images/indicator.gif) no-repeat center center;}

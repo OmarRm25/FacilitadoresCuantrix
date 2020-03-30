@@ -1,0 +1,44 @@
+
+
+
+
+img> img{
+	border:30;
+	border-radius:10px; 
+	width:100;
+	height:auto;
+	margin: auto;
+	display: block
+	background-color: green;
+}
+
+ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 5px;
+	background: #5BDCD6;
+	overflow: hidden;
+}
+
+li{
+	float: left
+}
+li a{
+	display: block;
+	color:white;
+	text-align: center;
+	padding: 15px 15px;
+	text-decoration: none;
+	border-right: 2px solid navy;
+}
+
+li a:visited{
+	color: #37110F
+
+}
+ 
+ li a:hover{
+ 	background-color:#8E9B98
+ 	color: black;
+ }
+
