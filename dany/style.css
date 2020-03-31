@@ -1,0 +1,92 @@
+@font-face{
+  font-family:fuente1;
+  src: url(fuentes/fuente1.ttf);
+}
+
+@font-face{
+  font-family:fuente3;
+  src: url(fuentes/fuente3.ttf);
+}
+
+body {
+  background: url(imagenes/formas.jpg);
+  background-size: 1500px;
+  background-position: center center;
+}
+
+h1 {
+  font-weight: bold;
+  text-align:center;  
+  font-family: fuente1;
+  font-size: 100px;
+  background: white;
+  margin: 10px 350px;
+  text-shadow: 8px 8px 8px #BDBCBC;
+}
+
+h3{
+  text-align: center;
+  font-family: Century Gothic;
+  background: white;
+  font-color: black;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  grid-gap: 15px;
+  padding: 10px;
+  font-family: fuente3;
+  font-size: 60px;
+  text-align: center;
+}
+
+#item1{
+   grid-column-start:2;
+   grid-column-end:3;
+   background: white;
+   border: double;
+   border-radius: 20%;
+   border-width: 3px;
+   border-color: black;
+   box-shadow: 10px 10px 10px #6A6966;
+ }
+
+#item2{
+   grid-column-start:1;
+   grid-column-end:2.5;
+   background: white;
+   border: double;
+   border-radius: 20%;
+   border-width: 3px;
+   border-color: black;
+   box-shadow: 10px 10px 10px #6A6966;
+}
+
+#item3{
+   grid-column-start:2.5;
+   grid-column-end:4;
+   background: white;
+   border: double;
+   border-radius: 20%;
+   border-width: 3px;
+   border-color: black;
+   box-shadow: 10px 10px 10px #6A6966;
+}
+
+#item4{
+   grid-column-start:2;
+   grid-column-end:3;
+   background: white;
+   border: double;
+   border-radius: 20%;
+   border-width: 3px;
+   border-color: black;
+   box-shadow: 10px 10px 10px #6A6966;
+}
+
+
+

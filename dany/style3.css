@@ -1,0 +1,65 @@
+
+
+
+@font-face{
+  font-family:fuente1;
+  src: url(fuentes/fuente1.ttf);
+}
+
+@font-face{
+  font-family:fuente3;
+  src: url(fuentes/fuente3.ttf);
+}
+
+body {
+  background: url(imagenes/cuadros.png);
+  }
+
+
+h1 {
+  font-family: fuente1;
+  text-align: center;
+  font-size: 80px;
+  text-shadow: 8px 8px 8px #BDBCBC;
+}
+
+ul{
+  color: black;
+  font-family: Century Gothic;
+  list-style: circle; 
+}
+
+.block{
+text-align:center;
+}
+
+.list{
+text-align: left;
+display:inline-block;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+
+#block1 {
+  background: url(imagenes/rayas.jpg);
+  background-size: 1500px;
+  border: 5px ridge #E4C7E3;
+  border-radius: 10px;
+  margin: 50px 0px;
+  padding:10px;
+  display: block;
+  text-align: center; 
+  font-family: fuente3;
+  font-size: 30px;
+}
+
+
+
+
+
+
+
