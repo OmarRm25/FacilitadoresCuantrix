@@ -1,0 +1,49 @@
+body {
+  background-color: rgb(71,147,192);
+}
+
+h1 {
+    color: black;
+    font-family: sans-serif;
+    text-align: justify-all;
+    border-style: all;
+  
+}
+
+h2 {
+font-family: sans-serif;
+  color: rgb(0,110,26);
+}
+
+h3 {
+font-family: sans-serif;
+  color: rgb(102,255,3);
+}
+
+.listas {
+  color: rgb(255,239,68);
+  font-family: sans-serif;
+  }
+
+.citas {
+  color: rgb(255,255,255);
+  font-family: monospace;
+}
+
+img {
+  float: left;
+    margin: 5px;
+  border-color: currentColor;
+border-width: 2px;
+  border-style: dashed;
+  border-radius: 20px;
+  
+}
+
+p {
+        text-align: justify-all;
+    font-family: serif;
+    font-size: 25px;
+    color:black;
+  
+}
