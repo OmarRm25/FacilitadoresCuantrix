@@ -1,0 +1,31 @@
+ 
+body {
+   background-color:rgb(240,129,88);}
+   
+ 
+
+ }
+p {
+  color:snow;
+  font-size:25px;
+  font-family:serif;
+    text-align: right;
+  width: auto;
+}
+img{ border-top: solid;
+	float:all;
+}
+h1{ text-align: center;
+	text-underline-position:under; 
+	size: b4;
+}
+h2{
+	text-align: left;
+	text-underline-position: left;
+	font-size:inherit;
+		font-family: sans-serif;
+}
+
+.sono{
+	color: rgb(193,231,255);
+}
